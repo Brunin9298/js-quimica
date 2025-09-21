@@ -29,15 +29,12 @@ function checkAnswer(question, answear) {
         }
     } else if (inputSelected == null) {
         feedback.innerHTML = '<p class="null back">↩️ Considere selecionar uma resposta.</p>';
-        feedback.style.display = 'block';
     } else {
-        feedback.innerHTML = '<p class="incorrect back">❌ Parabéns! Resposta errada!</p>';
-        feedback.style.display = 'block';
+        feedback.innerHTML = '<p class="incorrect back">❌ Resposta incorreta! Tente novamente.</p>';
     }
 }
 
 function checkAnswerMultiple(question, answears) {
-    // let allInputs = document.querySelectorAll(`input[name="q${question}"]`);
     let inputsSelected = document.querySelectorAll(`input[name="q${question}"]:checked`);
 
     let feedback = document.querySelector(`#feedback${question}`);
